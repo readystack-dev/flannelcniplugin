@@ -1,0 +1,33 @@
+{
+  "schema": "kitforge.source_file_manifest.v1",
+  "slug": "flannelcniplugin",
+  "file_count": 26,
+  "files": [
+    ".github/dependabot.yml",
+    ".github/workflows/buildTests.yaml",
+    ".github/workflows/release.yml",
+    ".gitignore",
+    "Dockerfile",
+    "Dockerfile.image",
+    "LICENSE",
+    "Makefile",
+    "README.md",
+    "RELEASING.md",
+    "dist/.gitignore",
+    "flannel.go",
+    "flannel_linux.go",
+    "flannel_linux_test.go",
+    "flannel_suite_test.go",
+    "flannel_windows.go",
+    "go.mod",
+    "go.sum",
+    "scripts/build_flannel.sh",
+    "scripts/check_static.sh",
+    "scripts/go-assert-static.sh",
+    "scripts/package.sh",
+    "scripts/release.sh",
+    "scripts/semver-parse.sh",
+    "scripts/test_linux.sh",
+    "scripts/version.sh"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "schema": "kitforge.source_tree_hash.v1",
+  "slug": "flannelcniplugin",
+  "repo": "https://github.com/flannel-io/cni-plugin",
+  "ref": "v1.9.1-flannel3",
+  "commit": "b380f201008e9bed159703846cf10d3c50b4f9ce",
+  "tree_listing_sha256": "0a7880b2dc90b22720e84af9cc7fe703812caf54d2c51fd01849a861d6fc7508",
+  "file_count": 26
+}

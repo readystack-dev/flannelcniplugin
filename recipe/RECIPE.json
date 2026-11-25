@@ -1,0 +1,285 @@
+{
+ "schema": "readystack.recipe.v1",
+ "slug": "flannelcniplugin",
+ "tag": "v1.9.1-flannel3-CE-ubuntu24.04-r4",
+ "tarball": "ReadyStack-flannelcniplugin-v1.9.1-flannel3-CE-ubuntu24.04-r4.tar.gz",
+ "tarball_sha256": "f16f83d5624caab8d29a164011e876717b7222d7c61d420df52f382c37e03483",
+ "kit_root": "v1.9.1-flannel3-CE-ubuntu24.04-r4",
+ "generated_at": "2026-11-20T18:44:41Z",
+ "generator": "KitForge release/recipe_publish.py",
+ "dockerfile": "Dockerfile.offline.pinned",
+ "build_script": "BUILD_OFFLINE.sh",
+ "preview_lines": 24,
+ "pins": {
+  "upstream": {
+   "repo": "https://github.com/flannel-io/cni-plugin",
+   "ref": "v1.9.1-flannel3",
+   "commit": "b380f201008e9bed159703846cf10d3c50b4f9ce",
+   "url": "https://github.com/flannel-io/cni-plugin/tree/b380f201008e9bed159703846cf10d3c50b4f9ce",
+   "from": "docs/provenance/BUILD_RECIPE.json"
+  },
+  "fetches": [
+   {
+    "kind": "git",
+    "url": "https://github.com/flannel-io/cni-plugin",
+    "ref": "v1.9.1-flannel3"
+   },
+   {
+    "kind": "http",
+    "url": "https://github.com/canonical/chisel/releases/download/v1.5.1/chisel_v1.5.1_linux_amd64.tar.gz"
+   },
+   {
+    "kind": "http",
+    "url": "https://github.com/canonical/chisel-releases/archive/f2600d3aa90123db6d44bb1441a99afc8b5847d9.tar.gz"
+   }
+  ],
+  "bases": [
+   {
+    "ref": "golang:1.26.11-bookworm@sha256:dc40a13b61304647ed7e5d581d246b86413dfc29d63c6d018310feb93cd98fc0",
+    "image": "golang:1.26.11-bookworm",
+    "digest": "sha256:dc40a13b61304647ed7e5d581d246b86413dfc29d63c6d018310feb93cd98fc0"
+   },
+   {
+    "ref": "ubuntu:24.04@sha256:9c7f200c07e3d4a03e7249d2c16bf66a51120fb876aa2242cf31451412543289",
+    "image": "ubuntu:24.04",
+    "digest": "sha256:9c7f200c07e3d4a03e7249d2c16bf66a51120fb876aa2242cf31451412543289"
+   }
+  ],
+  "toolchain": {
+   "buildkit": "moby/buildkit:v0.31.2",
+   "buildkit_image_digest": "sha256:e0e67ea9c4bb07bdef683e29f70f3b623d1eb9c82274a9ec04e6bb0511449fb0",
+   "builder_images": [
+    "golang:1.26.11-bookworm@sha256:dc40a13b61304647ed7e5d581d246b86413dfc29d63c6d018310feb93cd98fc0"
+   ]
+  },
+  "build_method": "source-rebuild-go",
+  "source_date_epoch": 1795161042,
+  "source_date_epoch_utc": "2026-11-20T07:50:42Z",
+  "target": {
+   "image_manifest_digest": "sha256:807fdbc72a55061ba38364d8fd0df87e25fdb0349ae36d84782672ca88a5e6fe",
+   "config_digest": "sha256:bdfc44ca6c78a3d8b4063e76de8841379a644d8e1d70d0b7bc7b3a2b744dfaa8",
+   "image": "readystack/flannelcniplugin:v1.9.1-flannel3-CE-ubuntu24.04-r4"
+  },
+  "checksummed_files": 1665
+ },
+ "files": [
+  {
+   "path": "BASES.tsv",
+   "size": 264,
+   "sha256": "4b98a700d33a9f62c6299744be2f31889777ec9f3b1cf9150d02a25daa1a297d",
+   "lines": 2,
+   "public": "full"
+  },
+  {
+   "path": "BUILD_OFFLINE.sh",
+   "size": 8856,
+   "sha256": "6ab4f08a6ec775b32d854f03413b30ecfe555ddba78cf0de956235f5a2a39542",
+   "lines": 162,
+   "public": "preview",
+   "preview_lines": 24
+  },
+  {
+   "path": "CHECKSUMS.sha256",
+   "size": 250445,
+   "sha256": "19ff4c99fdab1753cfcae1285c23eadb07c1abb197d1b3bb5cd8aba53ef1a326",
+   "lines": 1665,
+   "public": "account"
+  },
+  {
+   "path": "DOCKERFILE_NAME.txt",
+   "size": 26,
+   "sha256": "9aadd1ede68e016a6f163c97befc5ff2fcdc8ebd4f84b108dba63cb195fa8c84",
+   "lines": 1,
+   "public": "full"
+  },
+  {
+   "path": "Dockerfile",
+   "size": 3899,
+   "sha256": "d6a458dfe4147a9a11b3bc363444e95bd543c604a19964ce1eaeb80ccefd539d",
+   "lines": 47,
+   "public": "account"
+  },
+  {
+   "path": "Dockerfile.offline",
+   "size": 3899,
+   "sha256": "d6a458dfe4147a9a11b3bc363444e95bd543c604a19964ce1eaeb80ccefd539d",
+   "lines": 47,
+   "public": "account"
+  },
+  {
+   "path": "Dockerfile.offline.pinned",
+   "size": 3899,
+   "sha256": "d6a458dfe4147a9a11b3bc363444e95bd543c604a19964ce1eaeb80ccefd539d",
+   "lines": 47,
+   "public": "preview",
+   "preview_lines": 24
+  },
+  {
+   "path": "Dockerfile.vendor",
+   "size": 5565,
+   "sha256": "27fe39b5806b7b6e07d4f4dabe936b95239fdda856d41528f7e0f72308bf6ff9",
+   "lines": 46,
+   "public": "account"
+  },
+  {
+   "path": "FILE_MODES.tsv",
+   "size": 165912,
+   "sha256": "8e06107f568f4f01a191f1ce6000318e5429e63196037778a64dbb0b84849df4",
+   "lines": 1972,
+   "public": "account"
+  },
+  {
+   "path": "MANIFEST.txt",
+   "size": 137255,
+   "sha256": "c585cca9f4e4dfc772f2f0761b6b84db21e8b0856545d167c12b079094b546fd",
+   "lines": 1667,
+   "public": "account"
+  },
+  {
+   "path": "README.md",
+   "size": 3425,
+   "sha256": "2bfa44691529cfb20a8845591516930fb1e8d90e38688283bef352d3f733fa1d",
+   "lines": 39,
+   "public": "account"
+  },
+  {
+   "path": "SOURCE_DATE_EPOCH.txt",
+   "size": 11,
+   "sha256": "c530862279f6360af9eaefbb4cdad4da0b97b9bf7c595deb416b584aebd7bb2a",
+   "lines": 1,
+   "public": "full"
+  },
+  {
+   "path": "TARGET_DIGEST.txt",
+   "size": 423,
+   "sha256": "b464d542bab13168aeeab7164531760c30aa046ed154e3a1007544f7dd9a9dde",
+   "lines": 10,
+   "public": "full"
+  },
+  {
+   "path": "VERIFY_OFFLINE.sh",
+   "size": 10153,
+   "sha256": "3e8184ea230cfd8f41f977e26be6bf7bd03112c396c517837ce0c7de4f7399dd",
+   "lines": 165,
+   "public": "account"
+  },
+  {
+   "path": "docs/PROVENANCE.md",
+   "size": 2701,
+   "sha256": "fed04c8140f73963882fa5a065f696fa5206262532476ad0747bd2ea56514944",
+   "lines": 36,
+   "public": "account"
+  },
+  {
+   "path": "docs/REBUILD.md",
+   "size": 6571,
+   "sha256": "e544a4280afc86400f09ca09da293f90fcad710307fa3f4d2bd16119e9abdb78",
+   "lines": 62,
+   "public": "account"
+  },
+  {
+   "path": "docs/VERIFY.md",
+   "size": 2129,
+   "sha256": "649f96470c9ba0c4391227b0185b99bbbcd58c005473045963ca1530422d454f",
+   "lines": 34,
+   "public": "account"
+  },
+  {
+   "path": "docs/provenance/BASE_IMAGE_DIGESTS.lock",
+   "size": 82,
+   "sha256": "1248fa8ac70d47c4adf90aac2884c6b858b39e7d72e0f3ec4bac7a264fd0df80",
+   "lines": 2,
+   "public": "full"
+  },
+  {
+   "path": "docs/provenance/BUILD_RECIPE.json",
+   "size": 2871,
+   "sha256": "2928e522fa879e5fcae1f09d0313d835db6f40bfd1300abb6fb0d9d6ac808693",
+   "lines": 77,
+   "public": "account"
+  },
+  {
+   "path": "docs/provenance/CUSTODY_INPUTS.json",
+   "size": 671,
+   "sha256": "f88bbd6e41c71ee8f6185c1a5c90378b7754710ddde46fd35833726cb100eeea",
+   "lines": 17,
+   "public": "account"
+  },
+  {
+   "path": "docs/provenance/SOURCE_FILE_MANIFEST.json",
+   "size": 766,
+   "sha256": "9863bd56b7819bb19c020cf8c24a364b296099352a414868cb19a381b658002b",
+   "lines": 33,
+   "public": "account"
+  },
+  {
+   "path": "docs/provenance/SOURCE_TREE_HASH.json",
+   "size": 327,
+   "sha256": "851d44d79586254703c6995c7b5b28399e12a37ed8b303068a6e3ca988dd2420",
+   "lines": 9,
+   "public": "full"
+  },
+  {
+   "path": "docs/provenance/SYSTEM_PINNING.lock",
+   "size": 611,
+   "sha256": "e636dd5e764bf7bc71e39aa4697b3bdeafd5ed752dafd70a03814fd2bfa029c4",
+   "lines": 19,
+   "public": "account"
+  },
+  {
+   "path": "docs/provenance/TOOLCHAIN.lock",
+   "size": 2461,
+   "sha256": "bd1ba445d21c37be97947815b5422620b1f06e7a5a108f88dd458bad1acc129d",
+   "lines": 78,
+   "public": "account"
+  },
+  {
+   "path": "rebuild.json",
+   "size": 1506,
+   "sha256": "6b501b414dbdc960389ae67a6c711e1cf18ce2b7de78e66a7756845e1a6d7af3",
+   "lines": 41,
+   "public": "account"
+  },
+  {
+   "path": "rs-probe.go",
+   "size": 3179,
+   "sha256": "a8bdee17a3581f8685f58d7a8ccb7524153829f70b19c9d75e323c589de2ad8f",
+   "lines": 117,
+   "public": "account"
+  },
+  {
+   "path": "rs-probe.mod",
+   "size": 40,
+   "sha256": "a480b79acf98e4275725058076ad2a8684a2eee06c27f4337b75339c198ca92d",
+   "lines": 3,
+   "public": "account"
+  },
+  {
+   "path": "toolchain/BUILDKIT_TAG.txt",
+   "size": 22,
+   "sha256": "fcd530eeb02b063d2f047adad6eef896422a8e8d558513e5f09b2a262be32573",
+   "lines": 1,
+   "public": "full"
+  }
+ ],
+ "skipped": [],
+ "kit_adds": {
+  "bases": {
+   "files": 16,
+   "bytes": 326685578
+  },
+  "docs": {
+   "files": 84,
+   "bytes": 1219943
+  },
+  "toolchain": {
+   "files": 1,
+   "bytes": 111529472
+  },
+  "vendored": {
+   "files": 1538,
+   "bytes": 48900916
+  }
+ },
+ "redacted_files": 0
+}

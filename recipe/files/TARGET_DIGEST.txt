@@ -1,0 +1,10 @@
+image_manifest_digest=sha256:807fdbc72a55061ba38364d8fd0df87e25fdb0349ae36d84782672ca88a5e6fe
+config_digest=sha256:bdfc44ca6c78a3d8b4063e76de8841379a644d8e1d70d0b7bc7b3a2b744dfaa8
+tag=readystack/flannelcniplugin:v1.9.1-flannel3-CE-ubuntu24.04-r4
+probe_port=80
+probe_path=/
+probe_timeout=180
+probe_exec=/flannel version
+verify_boot=oneshot
+verify_oneshot_arg=/flannel
+verify_oneshot_expect=CNI Plugin flannel version v1.9.1
